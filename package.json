@@ -1,0 +1,22 @@
+{
+  "name": "redis-tasks",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "afify",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "ejs": "^3.1.9",
+    "express": "^4.19.1",
+    "morgan": "^1.10.0",
+    "redis": "^4.6.13"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}

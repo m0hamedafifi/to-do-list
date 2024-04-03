@@ -1,0 +1,79 @@
+// to start redis
+- `redis-cli` (command line)
+
+
+// to set value at redis
+-  `set key value [EX seconds] [PX milliseconds]`
+Example: `SET mykey "Hello"`
+
+// To set a key with an expiration time, use the EX keyword. The following command sets the key "mykey" to have a TTL
+- `SETEX `: Set the value and expire in seconds. 
+Example: `SETEX mykey 10 "Hello"`. This will set a key named mykey with the value Hello.
+
+// to get value at redis
+- `get key`
+
+// to delete a key from the database
+- `del key1 key2 ... keyn`
+
+// to check if a key exists in the database. It returns 1 if the key exists and  0 if not.
+- `exists key1 key2 ... keyn`
+
+// to get all keys
+-  `keys *`
+
+// To remove every thing
+- `flushall` or `FLUSHDB`
+
+// To expire  a key(time is in second)
+- `expire key time`
+
+// To get when akey will  be removed, it return null if no ttl set.
+- `ttl key`
+
+// To find out when a key will expire, with absolute time stamp
+- `pttl key`
+
+// To save the DB on disk
+- `save`
+
+// to clear input 
+- `clear`
+// to print server information
+- `info`
+
+// to get hash  data type related commands
+- `hset :::hashKey fieldName value`
+- `hget :::hashKey fieldName`
+- `hexists :::hashKey fieldName`
+- `hdel :::hashKey fieldName`
+- `hkeys :::hashKey`
+- `hlen :::hashKey`
+- `hvals :::hashKey`
+- `hmget :::hashKey fieldName [fieldName...]`. This command is used to fetch multiple fields values from the Hash.
+
+// to push and  pop element from list
+- `rpush :::listKey value1 value2 ..... valuen`
+- `lpop :::listKey`
+- `rpop :::listKey`
+
+// for sorted set
+- `zadd :::zsetKey score member [score member ...]`
+- `zrange :::zsetKey start end [withscores]`, default without scores.
+- `zrevrange :::zsetKey start end [withscores]`,default without scores.
+- `zcard :::zsetKey`
+- `zrem :::zsetKey member [member ...]`
+
+// for print element  of Set or  zSet
+- `smembers :::setOrZSetKey`
+
+// to print all list 
+- `lrange  :::listKey start end`
+
+// transaction command
+- `multi` // start a transcation
+- `exec` // commit all the cmd in the transcation
+- `discard` // rollback all the cmd in the transcation 
+
+// for mentor  redis client
+- `monitor` // it will print every thing what is happening on your redis server.
